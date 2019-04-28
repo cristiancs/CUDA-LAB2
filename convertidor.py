@@ -28,4 +28,13 @@ def TXTtoRGB(name):
 # RGBtoTXT('imagen')
 
 # Generar imagenes
-TXTtoRGB('img_salida')
+TXTtoRGB("kernel1_profile1")
+TXTtoRGB("kernel1_profile2")
+TXTtoRGB("kernel1_profile3")
+TXTtoRGB("kernel1_profile4")
+TXTtoRGB("kernel1_profile5")
+TXTtoRGB("kernel1_profile6")
+TXTtoRGB("kernel1_profile7")
+TXTtoRGB("kernel1_profile8")
+TXTtoRGB("kernel1_profile9")
+TXTtoRGB("kernel1_profile10")

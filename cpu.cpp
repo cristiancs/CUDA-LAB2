@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 	int n, m;
 	float *r, *g, *b;
 
-	pFile = fopen("imagen.txt", "r");
+	pFile = fopen(argv[1], "r");
 	fscanf(pFile, "%d %d", &m, &n);
 
 	r = new float[n * m];
@@ -70,11 +70,10 @@ int main(int argc, char const *argv[])
 
 	t1 = clock();
 
-	int binSize = 128;
+	int binSize = atoi(argv[3]);
 
 	for (int i = 0; i < int(n / (binSize * 2)); ++i)
 	{
-		cout << i << endl;
 		swapColumnas(r, g, b, n, i, binSize, m);
 	}
 
@@ -83,7 +82,7 @@ int main(int argc, char const *argv[])
 	cout << "Tiempo CPU: " << ms << " [ms]" << endl;
 
 	FILE *pSalida;
-	pSalida = fopen("img_salida.txt", "w");
+	pSalida = fopen(argv[2], "w");
 	fprintf(pSalida, "%d %d\n", m, n);
 	for (int i = 0; i < n * m; ++i)
 	{
