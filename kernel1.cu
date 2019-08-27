@@ -8,7 +8,7 @@ __global__ void kernel(float* r, float* g, float* b, float* r2, float* g2, float
 	if(tId < N * M) {
     int c = tId % N;
     int des = ( ((c / x ) % 2 != 0)) * (tId - x) + ((c / x ) % 2 == 0) * (tId + x);
-    int res = ( des > N * M ) * 0 + ( des <= N * M ) * des;
+    int res = ( des <= N * M ) * des;
 		r2[res] = r[tId];
 		g2[res] = g[tId];
 		b2[res] = b[tId];
@@ -81,6 +81,10 @@ int main(int argc, char const *argv[]) {
 	cudaFree(R_gpu);
 	cudaFree(G_gpu);
 	cudaFree(B_gpu);
+
+	cudaFree(R_gpu2);
+	cudaFree(G_gpu2);
+	cudaFree(B_gpu2);
 
 	delete R;
 	delete G;

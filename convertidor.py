@@ -1,6 +1,6 @@
 import matplotlib.pyplot as mpimg
 import numpy as np
-
+import sys
 
 def RGBtoTXT(name):
     img = mpimg.imread(name+'.png')
@@ -26,15 +26,23 @@ def TXTtoRGB(name):
 
 # Generar archivos de texto:
 # RGBtoTXT('imagen')
+TXTtoRGB(sys.argv[1])
 
 # Generar imagenes
-TXTtoRGB("kernel1_profile1")
-TXTtoRGB("kernel1_profile2")
-TXTtoRGB("kernel1_profile3")
-TXTtoRGB("kernel1_profile4")
-TXTtoRGB("kernel1_profile5")
-TXTtoRGB("kernel1_profile6")
-TXTtoRGB("kernel1_profile7")
-TXTtoRGB("kernel1_profile8")
-TXTtoRGB("kernel1_profile9")
-TXTtoRGB("kernel1_profile10")
+# TXTtoRGB("kernel1_1")
+# TXTtoRGB("kernel1_2")
+# TXTtoRGB("kernel1_3")
+# TXTtoRGB("kernel1_4")
+# TXTtoRGB("kernel1_5")
+# TXTtoRGB("kernel1_6")
+#TXTtoRGB("kernel2_7")
+# TXTtoRGB("kernel1_8")
+# TXTtoRGB("kernel2_9")
+# TXTtoRGB("kernel2_10")
+
+#TXTtoRGB("salida1")
+#TXTtoRGB("salida2")
+#TXTtoRGB("salida3")
+
+#TXTtoRGB("salida5")
+#TXTtoRGB("salida6")
